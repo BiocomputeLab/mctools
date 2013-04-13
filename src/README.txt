@@ -1,13 +1,15 @@
-### Motif Clustering Tools for Complex Networks
+Here you will find source code for each of the command line applications that makes up mctools. These are all written in C and make extensive use of the the igraph library (http://igraph.sf.net). 
+To compile, igraph must be in the appropriate include and library paths. Basic shell scripts and batch files have been included for compilation under each operating system. These may need to be adapted if you use an alternative compiler, or if specific include and library paths need to be added.
 
-The `mctools` package provides several command-line applications to calculate motif clustering statistics for a chosen motif within a complex network (`mcc`), break this clustering down into a distribution of the clustering types present (`mcstats`), and extract these clustered subgraphs from the original network (`mcextract`). See the [user guide](http://chofski.github.com/mctools) for further information on getting started.
+There are a number of compile time flags that can be used to enable non-standard features:
+-DDEBUG        : output debugging information.
+-DBRENCHMARK   : output timing information for major steps.
+-DEXPERIMENTAL : include experimental features e.g., OpenMP support
 
-![picture alt](http://www.chofski.co.uk/images/research/phd1.jpg "Title is optional") 
-
-Ready-to-run binary versions of the programs are provided for Windows, Linux and Mac OS X (see `bin` folder). However, for best performance we advise compilation from source (see `src` folder).
+For ready-to-use pre-compiled versions of this code see the bin folder in the project root.
 
 If you make use of this software in your work we request that you cite:
 
->T.E. Gorochowski, C.S. Grierson and M. di Bernardo. "mctools: Motif Clustering Analysis for Complex Networks." 2012. (in preparation) [[doi](http://chofski.github.com/mctools/)]
+T.E. Gorochowski, C.S. Grierson and M. di Bernardo. "mctools: Motif Clustering Analysis for Complex Networks." 2013. (in preparation) (http://chofski.github.com/mctools/)
 
-This software has been developed by Thomas Gorochowski (@chofski) and makes extensive use of the [`igraph`](http://igraph.sf.net) library. All code is distributed under the OSI recognised [Non-Profit Open Software License version 3.0 (NPOSL-3.0)](http://www.opensource.org/licenses/NOSL3.0).
+This software has been developed by Thomas Gorochowski (@chofski). All code is distributed under the OSI recognised [Non-Profit Open Software License version 3.0 (NPOSL-3.0)](http://www.opensource.org/licenses/NOSL3.0).
