@@ -4,7 +4,7 @@ The `mctools` package provides several command-line applications to calculate mo
 
 ![picture alt](http://www.chofski.co.uk/images/research/phd1.jpg "Title is optional") 
 
-Ready-to-run binary versions of the programs are provided for Windows, Linux and Mac OS X (see `bin` folder). However, for best performance we advise compilation from source (see `src` folder).
+Ready-to-run binary versions of the programs are provided for Windows, Linux and Mac OS X (see `bin` folder). However, for best performance we advise compilation from source (see `mctools` folder).
 
 If you make use of this software in your work we request that you cite:
 

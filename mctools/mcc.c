@@ -253,8 +253,10 @@ int motif_clustering (double *res, igraph_t* graph, igraph_t *motif)
 	/* 4. Find actual and total possible shared vertices */
 	totSharedVerts = 0;
 	
-	/* TODO: Add OpenMP parallel calculations for large graphs */
-//#pragma omp parallel for default(none) private(i,j,k,p,found,curi,curj) shared(motifSize,mapsCount,totSharedVerts,maps)
+	/* OpenMP parallel calculations for large graphs */
+#ifdef EXPERIMENTAL
+#pragma omp parallel for default(none) private(i,j,k,p,found,curi,curj) shared(motifSize,mapsCount,totSharedVerts,maps)
+#endif
 	for (i=0; i<mapsCount; i++) {
 		curi = (igraph_vector_t *)VECTOR(maps)[i];
 		if (VECTOR(*curi)[0] != -1) {
@@ -281,8 +283,10 @@ int motif_clustering (double *res, igraph_t* graph, igraph_t *motif)
 		}
 	}
 	
-	/* TODO: Add OpenMP parallel calculations for large graphs */
-//#pragma omp parallel for default(none) private(i) shared(posSharedVerts)
+	/* OpenMP parallel calculations for large graphs */
+#ifdef EXPERIMENTAL
+#pragma omp parallel for default(none) private(i) shared(posSharedVerts)
+#endif
 	posSharedVerts = 0;
 	for (i=0; i<uniqueMotifs; i++) {
 		posSharedVerts += (motifSize-1)*(uniqueMotifs-i-1);
@@ -356,8 +360,10 @@ int calc_samples (igraph_vector_t *res, igraph_t *graph, igraph_t *motif,
 	/* Attempt to generate the number of samples required */
 	flag = 0;
 	
-	/* Currently an issue using OpenMP due to non-thread-safe nature of igraph */
-	//#pragma omp parallel for default(none) private(s,j,flag,shared) shared(suc,ctime_1,ctime_2,maps,Gs,motifs,samples,nodes,counts,graph,res)
+	/* OpenMP parallelisation */
+#ifdef EXPERIMENTAL
+#pragma omp parallel for default(none) private(s,j,flag,shared) shared(suc,ctime_1,ctime_2,maps,Gs,motifs,samples,nodes,counts,graph,res)
+#endif
 	for (s=0; s<samples; s++) {
 		
 #ifdef BENCHMARK
