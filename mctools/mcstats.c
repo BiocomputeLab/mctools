@@ -234,7 +234,7 @@ int motif_clustering_stats (igraph_t *G, igraph_t *M, char *prefix)
 #endif
 	
 	/* Find submorphisms between graph and motif */
-	igraph_get_subisomorphisms_vf2(G, M, &maps);
+	igraph_get_subisomorphisms_vf2(G, M, NULL, NULL, NULL, NULL, &maps, NULL, NULL, NULL);
 	
 #ifdef DEBUG
 	printf("Cleaning up motif mappings.\n");
@@ -498,7 +498,7 @@ int clean_subgraph(igraph_t *res, igraph_t *G, igraph_t *M, igraph_vector_t *m1N
 	}
 
 	/* Remove any duplicate edges */
-	igraph_simplify(res, -1, -1);
+	igraph_simplify(res, -1, -1, 0);
 
 	/* Free used memory */
 	igraph_vector_destroy(&map);
@@ -565,7 +565,7 @@ int add_cluster_type (igraph_vector_ptr_t *cTypes, igraph_t *M, igraph_vector_t 
 		curG = (igraph_t *)VECTOR(*cTypes)[(long int)i];
 		/* Check to see if the clustering type is the same */
 		if (igraph_vcount(G) == igraph_vcount(curG) && igraph_ecount(G) == igraph_ecount(curG)) {
-			igraph_count_subisomorphisms_vf2(G, curG, &morphs);
+			igraph_count_subisomorphisms_vf2(G, curG, NULL, NULL, NULL, NULL, &morphs, NULL, NULL, NULL);
 			if (morphs > 0) {
 				/* Must already exist */
 				found = 1;
@@ -639,7 +639,7 @@ int merge_motifs (igraph_t *res, igraph_t *M, igraph_vector_t *m1, igraph_vector
 	igraph_add_edges(res, &newEdges, 0);
 	
 	/* Remove duplicate edges (this interferes with isomorphic tests later) */
-	igraph_simplify(res, TRUE, FALSE);
+	igraph_simplify(res, TRUE, FALSE, 0);
 	
 	/* Free used memory */
 	igraph_vector_destroy(&map);

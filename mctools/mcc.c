@@ -184,7 +184,7 @@ int motif_clustering (double *res, igraph_t* graph, igraph_t *motif)
 	
 	/* 1. Calculate the size and motif symmetries */
 	motifSize = (long int)igraph_vcount(motif);
-	igraph_count_subisomorphisms_vf2(motif, motif, &rotSym);
+	igraph_count_subisomorphisms_vf2(motif, motif, NULL, NULL, NULL, NULL, &rotSym, NULL, NULL, NULL);
 	
 #ifdef BENCHMARK
 	ctime_2 = clock();
@@ -195,7 +195,7 @@ int motif_clustering (double *res, igraph_t* graph, igraph_t *motif)
 #endif
 	
 	/* 2. Find submorphisms between graph and motif */
-	igraph_get_subisomorphisms_vf2(graph, motif, &maps);
+	igraph_get_subisomorphisms_vf2(graph, motif, NULL, NULL, NULL, NULL, &maps, NULL, NULL, NULL);
 	
 	
 #ifdef BENCHMARK
@@ -600,7 +600,7 @@ igraph_integer_t motif_count (igraph_t *graph, igraph_t *motif)
 	
 	/* 1. Calculate the size and motif symmetries */
 	motifSize = (long int)igraph_vcount(motif);
-	igraph_count_subisomorphisms_vf2(motif, motif, &rotSym);
+	igraph_count_subisomorphisms_vf2(motif, motif, NULL, NULL, NULL, NULL, &rotSym, NULL, NULL, NULL);
 	
 #ifdef BENCHMARK
 	ctime_2 = clock();
@@ -611,7 +611,7 @@ igraph_integer_t motif_count (igraph_t *graph, igraph_t *motif)
 #endif
 	
 	/* 2. Find submorphisms between graph and motif */
-	igraph_get_subisomorphisms_vf2(graph, motif, &maps);
+	igraph_get_subisomorphisms_vf2(graph, motif, NULL, NULL, NULL, NULL, &maps, NULL, NULL, NULL);
 	
 	
 #ifdef BENCHMARK

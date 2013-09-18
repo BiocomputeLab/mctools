@@ -135,7 +135,7 @@ int motif_extract (const igraph_t *G, igraph_t *outG, igraph_t *M, igraph_vector
 #endif
 	
 	/* Find submorphisms between graph and motif */
-	igraph_get_subisomorphisms_vf2(G, M, &maps);
+	igraph_get_subisomorphisms_vf2(G, M, NULL, NULL, NULL, NULL, &maps, NULL, NULL, NULL);
 	
 #ifdef DEBUG
 	printf("Cleaning up motif mappings.\n");
@@ -256,7 +256,7 @@ int motif_extract (const igraph_t *G, igraph_t *outG, igraph_t *M, igraph_vector
 	igraph_eit_destroy(&eit);
 	
 	/* Remove any duplicate edges */
-	igraph_simplify(outG, -1, -1);
+	igraph_simplify(outG, -1, -1, 0);
 	
 	/* Free used memory */
 	igraph_vs_destroy(&vs);

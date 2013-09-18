@@ -1,5 +1,4 @@
-Here you will find source code for each of the command line applications that makes up mctools. These are all written in C and make extensive use of the the igraph library (http://igraph.sf.net). 
-To compile, igraph must be in the appropriate include and library paths. Basic shell scripts and batch files have been included for compilation under each operating system. These may need to be adapted if you use an alternative compiler, or if specific include and library paths need to be added.
+Here you will find source code for each of the command line applications that makes up mctools. These are all written in C and make extensive use of the the igraph library (http://igraph.sf.net). To compile, igraph must be in the appropriate include and library paths and be version 0.6.5 or later. Basic shell scripts and batch files have been included for compilation under each operating system. These may need to be adapted if you use an alternative compiler, or if specific include and library paths need to be added.
 
 There are a number of compile time flags that can be used to enable non-standard features:
 -DDEBUG        : output debugging information.
