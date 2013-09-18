@@ -5,12 +5,16 @@
  *  via their isomorphic class from igraph. Verbose modes can be enabled at compile time 
  *  (-DDEBUG) which will help understand the steps being performed.
  *
+ *------------------------------------------------------------------------------------------------
+ *
  *  To compile use the following command:
  *
  *     gcc -I INC_DIR -L LIB_DIR -O3 mcextract.c -ligraph -lstdc++ -o mcextract
  *
  *  where INC_DIR is the include directory and LIB_DIR is the library directory. The igraph
  *  library is required to compile this program and can be found at http://igraph.sourceforge.net/
+ *
+ *------------------------------------------------------------------------------------------------
  *
  *  Usage:
  *
@@ -22,8 +26,9 @@
  *     GRAPH_OUT:   File to output the subgraph to (GML format).
  *     MAP_OUT:     File containing mappings of in node -> out node (optional)
  *
- *  Copyright (C) 2011 Thomas E. Gorochowski <tgorochowski@me.com>
- *  Bristol Centre for Complexity Sciences, University of Bristol, Bristol, UK
+ *------------------------------------------------------------------------------------------------
+ *
+ *  Copyright (C) 2013 Thomas E. Gorochowski <tom@chofski.co.uk>
  *
  *  This software released under the Open Source Initiative (OSI) approved Non-Profit Open 
  *  Software License ("Non-Profit OSL") 3.0. This software is distributed in the hope that 
@@ -38,9 +43,13 @@
 #define TRUE -1
 #define FALSE 0
 
+/* ---------------------------------------------------------------------------------------------- */
+
 /* Function prototypes */
 int  motif_extract (const igraph_t *G, igraph_t *res, igraph_t *M, igraph_vector_t *nMaps);
 void print_usage   (void);
+
+/* ---------------------------------------------------------------------------------------------- */
 
 /* Main function */
 int main (int argc, const char * argv[])
@@ -95,6 +104,8 @@ int main (int argc, const char * argv[])
 	igraph_destroy(&subgraphs);
 	return 0;
 }
+
+/* ---------------------------------------------------------------------------------------------- */
 
 /* Extract the required motifs from the graph  */
 int motif_extract (const igraph_t *G, igraph_t *outG, igraph_t *M, igraph_vector_t *nMaps)
@@ -253,10 +264,12 @@ int motif_extract (const igraph_t *G, igraph_t *outG, igraph_t *M, igraph_vector
 	return 0;
 }
 
+/* ---------------------------------------------------------------------------------------------- */
+
 /* Print usage information */
 void print_usage (void)
 {
-	printf("mcextract GRAPH_IN MOTIF_SIZE MOTIF_ID GRAPH_OUT\n");
+	printf("mcextract GRAPH_IN MOTIF_SIZE MOTIF_ID GRAPH_OUT [MAP_OUT]\n");
 	printf("  GRAPH_IN   - GML format file of input graph\n");
 	printf("  MOTIF_SIZE - Size of the motif to consider\n");
 	printf("  MOTIF_ID   - The isomorphic class of the motif to extract\n");

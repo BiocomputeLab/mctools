@@ -4,12 +4,16 @@
  *  Calculates motif clustering stats for a given motif and all the types of clustering it can
  *  take part in.
  *
+ *------------------------------------------------------------------------------------------------
+ *
  *  To compile use the following command:
  *
  *     gcc -I INC_DIR -L LIB_DIR -O3 mcstats.c -ligraph -lstdc++ -o mcstats
  *
  *  where INC_DIR is the include directory and LIB_DIR is the library directory. The igraph
  *  library is required to compile this program and can be found at http://igraph.sourceforge.net/
+ *
+ *------------------------------------------------------------------------------------------------
  *
  *  Usage:
  *
@@ -20,8 +24,9 @@
  *     MOTIF_ID   - The isomorphic class of the motif
  *     OUT_PREFIX - Prefix to output all clustering type and node map files (Optional)
  *
- *  Copyright (C) 2011 Thomas E. Gorochowski <tgorochowski@me.com>
- *  Bristol Centre for Complexity Sciences, University of Bristol, Bristol, UK
+ *------------------------------------------------------------------------------------------------
+ *
+ *  Copyright (C) 2013 Thomas E. Gorochowski <tom@chofski.co.uk>
  *
  *  This software released under the Open Source Initiative (OSI) approved Non-Profit Open 
  *  Software License ("Non-Profit OSL") 3.0. This software is distributed in the hope that 

@@ -41,8 +41,7 @@
  *
  *------------------------------------------------------------------------------------------------
  *
- *  Copyright (C) 2012 Thomas E. Gorochowski <tgorochowski@me.com>
- *  Bristol Centre for Complexity Sciences, University of Bristol, Bristol, UK
+ *  Copyright (C) 2013 Thomas E. Gorochowski <tom@chofski.co.uk>
  *
  *  This software released under the Open Source Initiative (OSI) approved Non-Profit Open 
  *  Software License ("Non-Profit OSL") 3.0. This software is distributed in the hope that 
