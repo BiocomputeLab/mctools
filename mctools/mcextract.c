@@ -149,7 +149,7 @@ int motif_extract (const igraph_t *G, igraph_t *outG, igraph_t *M, igraph_vector
 			/* Generate a vertex selector from our IDs vector */
 			igraph_vs_vector(&vs, curMap);
 			/* Extract the subgraph using this vertex selector */
-			igraph_subgraph(G, &subGraph, vs);
+			igraph_induced_subgraph(G, &subGraph, vs, IGRAPH_SUBGRAPH_CREATE_FROM_SCRATCH);
 			/* Check to see if the motif is missing edges from original graph => not proper motif */
 			if (igraph_ecount(&subGraph) != igraph_vcount(M)) {
 				/* Remove mapping set first value to -1*/

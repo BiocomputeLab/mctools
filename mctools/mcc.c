@@ -220,7 +220,7 @@ int motif_clustering (double *res, igraph_t* graph, igraph_t *motif)
 			igraph_vs_vector(&vs, curi);
 			
 			/* Extract the subgraph using this vertex selector */
-			igraph_subgraph(graph, &subGraphs, vs);
+			igraph_induced_subgraph(graph, &subGraphs, vs, IGRAPH_SUBGRAPH_CREATE_FROM_SCRATCH);
 			
 			if (igraph_ecount(&subGraphs) != motifEdges) {
 				/* Remove mapping set first value to -1*/
@@ -636,7 +636,7 @@ igraph_integer_t motif_count (igraph_t *graph, igraph_t *motif)
 			igraph_vs_vector(&vs, curi);
 			
 			/* Extract the subgraph using this vertex selector */
-			igraph_subgraph(graph, &subGraphs, vs);
+			igraph_induced_subgraph(graph, &subGraphs, vs, IGRAPH_SUBGRAPH_CREATE_FROM_SCRATCH);
 			
 			if (igraph_ecount(&subGraphs) != motifEdges) {
 				/* Remove mapping set first value to -1*/

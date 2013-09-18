@@ -248,7 +248,7 @@ int motif_clustering_stats (igraph_t *G, igraph_t *M, char *prefix)
 			/* Generate a vertex selector from our IDs vector */
 			igraph_vs_vector(&vs, curMap);
 			/* Extract the subgraph using this vertex selector */
-			igraph_subgraph(G, &subGraph, vs);
+			igraph_induced_subgraph(G, &subGraph, vs, IGRAPH_SUBGRAPH_CREATE_FROM_SCRATCH);
 			/* Check to see if the motif is missing edges from original graph => not proper motif */
 			if (igraph_ecount(&subGraph) != igraph_vcount(M)) {
 				/* Remove mapping set first value to -1*/
@@ -470,7 +470,7 @@ int clean_subgraph(igraph_t *res, igraph_t *G, igraph_t *M, igraph_vector_t *m1N
 	for (i=mSize; i<mapSize; i++) {
 
 		/* Get all edge (IN and OUT) from the node */
-		igraph_es_adj(&es, (igraph_integer_t)VECTOR(map)[(long int)i], IGRAPH_ALL);
+		igraph_es_incident(&es, (igraph_integer_t)VECTOR(map)[(long int)i], IGRAPH_ALL);
 
 		/* For each edge check to see if other end is in mapping list */
 		igraph_eit_create(G, es, &eit);
@@ -530,7 +530,7 @@ int add_cluster_type (igraph_vector_ptr_t *cTypes, igraph_t *M, igraph_vector_t 
 		VECTOR(seq)[(long int)i] = i;
 	}
 	igraph_vs_vector(&vs, &seq);
-	igraph_subgraph(G, &tempG, vs);	
+	igraph_induced_subgraph(G, &tempG, vs, IGRAPH_SUBGRAPH_CREATE_FROM_SCRATCH);	
 	if ((long int)igraph_ecount(&tempG) != (long int)igraph_ecount(M)) {
 		igraph_destroy(&tempG);
 		igraph_vs_destroy(&vs);
@@ -548,7 +548,7 @@ int add_cluster_type (igraph_vector_ptr_t *cTypes, igraph_t *M, igraph_vector_t 
 		VECTOR(seq)[(long int)(igraph_vector_size(m1) + i)] = igraph_vcount(M) + i;
 	}
 	igraph_vs_vector(&vs, &seq);
-	igraph_subgraph(G, &tempG, vs);	
+	igraph_induced_subgraph(G, &tempG, vs, IGRAPH_SUBGRAPH_CREATE_FROM_SCRATCH);	
 	if ((long int)igraph_ecount(&tempG) != (long int)igraph_ecount(M)) {
 		igraph_destroy(&tempG);
 		igraph_vs_destroy(&vs);
