@@ -7,4 +7,4 @@ In this folder we include a set of example graphs that can be analysed using the
 ## foodweb
 
 
->T.E. Gorochowski, C.S. Grierson and M. di Bernardo. "mctools: Motif Clustering Analysis for Complex Networks." 2012. (in preparation) [[doi](http://chofski.github.com/mctools/)]
+>T.E. Gorochowski, C.S. Grierson and M. di Bernardo. "MCTools: Motif Clustering Analysis for Complex Networks." 2012. (in preparation) [[doi](http://chofski.github.com/mctools/)]
