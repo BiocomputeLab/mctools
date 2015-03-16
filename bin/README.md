@@ -1,4 +1,4 @@
-Here you will find ready-to-run pre-compiled binary versions of the latest version of mctools. Download the folder for you particular operating system and follow the instructions within. 
+Here you will find ready-to-run pre-compiled binary versions of the latest version of MCTools. Within this folder you will also find the `motif_isomorphic_codes.pdf` file that contains the numeric codes used to specific the motif types of interest.
 
 If you make use of this software in your work we request that you cite:
 

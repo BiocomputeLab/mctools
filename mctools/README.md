@@ -11,7 +11,7 @@ There are a number of compile time flags that can be used to enable non-standard
 - -DBRENCHMARK   : output timing information for major steps.
 - -DEXPERIMENTAL : include experimental features e.g., OpenMP support.
 
-Within this folder you will also find the motif_isomorphic_codes.pdf file that contains the numeric codes used to specific the motif types of interest. For ready-to-use pre-compiled versions of this code see the bin folder in the project root.
+Within this folder you will also find the `motif_isomorphic_codes.pdf` file that contains the numeric codes used to specific the motif types of interest. For ready-to-use pre-compiled versions of this code see the bin folder in the project root.
 
 If you make use of this software in your work we request that you cite:
 
