@@ -9,6 +9,6 @@ For ready-to-use pre-compiled versions of this code see the bin folder in the pr
 
 If you make use of this software in your work we request that you cite:
 
-T.E. Gorochowski, C.S. Grierson and M. di Bernardo. "mctools: motif clustering toolkit for complex networks." 2013. (in preparation) (http://chofski.github.com/mctools/)
+T.E. Gorochowski, C.S. Grierson and M. di Bernardo. "MCTools: motif clustering toolkit for complex networks." 2013. (in preparation) (http://chofski.github.com/mctools/)
 
 This software has been developed by Thomas Gorochowski (@chofski). All code is distributed under the OSI recognised [Non-Profit Open Software License version 3.0 (NPOSL-3.0)](http://www.opensource.org/licenses/NOSL3.0).
