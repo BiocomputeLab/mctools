@@ -5,9 +5,9 @@ Here you will find source code for each of the command line applications that ma
 	gcc -O3 mcextract.c -ligraph -lstdc++ -o mcextract -Wall
 
 There are a number of compile time flags that can be used to enable non-standard features:
--DDEBUG        : output debugging information.
--DBRENCHMARK   : output timing information for major steps.
--DEXPERIMENTAL : include experimental features e.g., OpenMP support.
+- DDEBUG        : output debugging information.
+- DBRENCHMARK   : output timing information for major steps.
+- DEXPERIMENTAL : include experimental features e.g., OpenMP support.
 
 For ready-to-use pre-compiled versions of this code see the bin folder in the project root.
 
