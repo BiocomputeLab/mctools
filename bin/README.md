@@ -2,4 +2,4 @@ Here you will find ready-to-run pre-compiled binary versions of the latest versi
 
 If you make use of this software in your work we request that you cite:
 
-T.E. Gorochowski, C.S. Grierson and M. di Bernardo. "MCTools: Motif Clustering Analysis for Complex Networks." 2015. (in preparation)
+>T.E. Gorochowski, C.S. Grierson and M. di Bernardo. "MCTools: Motif Clustering Analysis for Complex Networks." 2015. (in preparation)
