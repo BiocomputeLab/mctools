@@ -1,4 +1,4 @@
-### Motif Clustering Tools for Complex Networks
+# Motif Clustering Tools for Complex Networks
 
 The `mctools` package provides several command-line applications to calculate motif clustering statistics for a chosen motif within a complex network (`mcc`), break this clustering down into a distribution of the clustering types present (`mcstats`), and extract these clustered subgraphs from the original network (`mcextract`).
 

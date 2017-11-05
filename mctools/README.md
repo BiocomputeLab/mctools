@@ -1,4 +1,4 @@
-#Compiling tools from source
+# Compiling tools from source
 
 Here you will find source code for each of the command line applications that makes up mctools. These are all written in C and make extensive use of the the igraph library (http://igraph.sf.net). To compile, igraph must be in the appropriate include and library paths and be version 0.6.5 or later. The following commands can then be used for compilation:
 
