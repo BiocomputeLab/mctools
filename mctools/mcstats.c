@@ -26,7 +26,7 @@
  *
  *------------------------------------------------------------------------------------------------
  *
- *  Copyright (C) 2013 Thomas E. Gorochowski <tom@chofski.co.uk>
+ *  Copyright (C) 2018 Thomas E. Gorochowski <tom@chofski.co.uk>
  *
  *  This software released under the Open Source Initiative (OSI) approved Non-Profit Open 
  *  Software License ("Non-Profit OSL") 3.0. This software is distributed in the hope that 
